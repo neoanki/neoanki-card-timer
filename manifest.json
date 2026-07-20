@@ -1,0 +1,24 @@
+{
+  "format": "neo-anki-extension",
+  "schemaVersion": 2,
+  "id": "org.neoanki.card-timer",
+  "name": "Card Timer",
+  "version": "2.0.0",
+  "sdkVersion": 2,
+  "publisher": "NeoAnki contributors",
+  "description": "Shows an optional per-card target time without grading memory from elapsed time.",
+  "homepage": "https://github.com/neoanki/neoanki-card-timer",
+  "publisherKey": "MCowBQYDK2VwAyEADXRs0EgH8lw6h36O6fHOwU1JaXIsKnswhU2GMnZyNoA=",
+  "permissions": ["config:sync", "ui:settings", "ui:review"],
+  "workerEntry": "dist/worker.js",
+  "uiEntries": [
+    { "id": "settings", "surface": "settings", "entry": "dist/settings.js" },
+    { "id": "review", "surface": "review", "entry": "dist/review.js" }
+  ],
+  "provenance": {
+    "sourceCommit": "0000000000000000000000000000000000000000",
+    "coreCommit": "23b063f75868a6c104eb5ed157fc44df9179b466",
+    "buildSystem": "neo-anki-extension-cli"
+  }
+}
+
