@@ -3,10 +3,10 @@
   "schemaVersion": 2,
   "id": "org.neoanki.card-timer",
   "name": "Card Timer",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "sdkVersion": 2,
   "publisher": "NeoAnki contributors",
-  "description": "Shows an optional per-card target time without grading memory from elapsed time.",
+  "description": "Show a countdown target beside each review card to help pace study sessions.",
   "homepage": "https://github.com/neoanki/neoanki-card-timer",
   "publisherKey": "MCowBQYDK2VwAyEADXRs0EgH8lw6h36O6fHOwU1JaXIsKnswhU2GMnZyNoA=",
   "permissions": ["config:sync", "ui:settings", "ui:review"],
@@ -21,4 +21,3 @@
     "buildSystem": "neo-anki-extension-cli"
   }
 }
-
