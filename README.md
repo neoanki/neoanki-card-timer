@@ -11,7 +11,7 @@ Keep review sessions moving with a visible countdown target for each card. When 
 
 ## Install
 
-Download the `.neoanki-extension` file from the latest release, then open **Settings → Extensions → Install from file** in Neo Anki.
+Download the `.neoanki-extension` file from the latest release, then open **Extensions → Browse → Install from file** in Neo Anki.
 
 ## Privacy and permissions
 

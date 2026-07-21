@@ -3,7 +3,8 @@
   "schemaVersion": 2,
   "id": "org.neoanki.card-timer",
   "name": "Card Timer",
-  "version": "2.0.2",
+  "version": "2.0.3",
+  "minimumNeoAnkiVersion": "0.4.0",
   "sdkVersion": 2,
   "publisher": "NeoAnki contributors",
   "description": "Show a countdown target beside each review card to help pace study sessions.",
@@ -12,12 +13,12 @@
   "permissions": ["config:sync", "ui:settings", "ui:review"],
   "workerEntry": "dist/worker.js",
   "uiEntries": [
-    { "id": "settings", "surface": "settings", "entry": "dist/settings.js" },
-    { "id": "review", "surface": "review", "entry": "dist/review.js" }
+    { "id": "settings", "surface": "settings", "entry": "dist/settings.js", "label": "Card Timer", "description": "Set review pacing and countdown behavior.", "icon": "timer", "launchDestination": "extensions/configure" },
+    { "id": "review", "surface": "review", "entry": "dist/review.js", "label": "Review timer", "description": "Show the configured pacing target during review.", "icon": "timer", "launchDestination": "review" }
   ],
   "provenance": {
     "sourceCommit": "0000000000000000000000000000000000000000",
-    "coreCommit": "23b063f75868a6c104eb5ed157fc44df9179b466",
+    "coreCommit": "7ad6541f1e4a15553d6ffd31c70708ae193691fe",
     "buildSystem": "neo-anki-extension-cli"
   }
 }

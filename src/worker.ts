@@ -9,11 +9,11 @@ const requestIdOf = (request: unknown) => {
 const extension = defineExtension({
   manifest: {
     format: 'neo-anki-extension', schemaVersion: 2, sdkVersion: 2,
-    id: 'org.neoanki.card-timer', name: 'Card Timer', version: '2.0.2', publisher: 'NeoAnki contributors',
+    id: 'org.neoanki.card-timer', name: 'Card Timer', version: '2.0.3', minimumNeoAnkiVersion: '0.4.0', publisher: 'NeoAnki contributors',
     publisherKey: 'MCowBQYDK2VwAyEADXRs0EgH8lw6h36O6fHOwU1JaXIsKnswhU2GMnZyNoA=',
     permissions: ['config:sync', 'ui:settings', 'ui:review'], workerEntry: 'dist/worker.js',
-    uiEntries: [{ id: 'settings', surface: 'settings', entry: 'dist/settings.js' }, { id: 'review', surface: 'review', entry: 'dist/review.js' }],
-    provenance: { sourceCommit: '0000000000000000000000000000000000000000', coreCommit: '23b063f75868a6c104eb5ed157fc44df9179b466', buildSystem: 'neo-anki-extension-cli' },
+    uiEntries: [{ id: 'settings', surface: 'settings', entry: 'dist/settings.js', label: 'Card Timer', description: 'Set review pacing and countdown behavior.', icon: 'timer', launchDestination: 'extensions/configure' }, { id: 'review', surface: 'review', entry: 'dist/review.js', label: 'Review timer', description: 'Show the configured pacing target during review.', icon: 'timer', launchDestination: 'review' }],
+    provenance: { sourceCommit: '0000000000000000000000000000000000000000', coreCommit: '7ad6541f1e4a15553d6ffd31c70708ae193691fe', buildSystem: 'neo-anki-extension-cli' },
   },
   async handle(request, host) {
     if (request.type !== 'command') return { type: 'error', requestId: requestIdOf(request), code: 'unsupported', message: 'Card Timer cannot handle this request.' }
