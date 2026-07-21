@@ -1,6 +1,6 @@
 {
   "name": "@neoanki/card-timer",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "A countdown target for pacing Neo Anki review sessions.",
   "license": "MIT",
   "type": "module",

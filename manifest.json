@@ -3,7 +3,7 @@
   "schemaVersion": 2,
   "id": "org.neoanki.card-timer",
   "name": "Card Timer",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "sdkVersion": 2,
   "publisher": "NeoAnki contributors",
   "description": "Show a countdown target beside each review card to help pace study sessions.",
