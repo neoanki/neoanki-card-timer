@@ -4,7 +4,7 @@ import { installBaseStyles } from './ui.js'
 
 installBaseStyles()
 const root = document.getElementById('root')!
-root.innerHTML = `<main class="panel" aria-busy="true"><div class="heading"><div><strong>Card timer</strong><p>Choose a target time for each review card.</p></div><label class="switch"><input id="enabled" type="checkbox" disabled><span>Disabled</span></label></div><label class="field" for="seconds">Seconds per card<input id="seconds" type="number" min="${MIN_SECONDS}" max="${MAX_SECONDS}" step="5" disabled></label><p class="note">At zero, NeoAnki only announces that the target elapsed. It never records a grade automatically.</p><button class="save" type="button" disabled>Save settings</button><p class="status" role="status" aria-live="polite">Loading settings…</p></main>`
+root.innerHTML = `<main class="panel" aria-busy="true"><div class="heading"><div><strong>Card Timer</strong><p>Choose a countdown target for each review card.</p></div><label class="switch"><input id="enabled" type="checkbox" disabled><span>Disabled</span></label></div><label class="field" for="seconds">Seconds per card<input id="seconds" type="number" min="${MIN_SECONDS}" max="${MAX_SECONDS}" step="5" disabled></label><p class="note">When time runs out, the card stays open. Reveal the answer and grade it when you are ready.</p><button class="save" type="button" disabled>Save settings</button><p class="status" role="status" aria-live="polite">Loading settings…</p></main>`
 const enabled = root.querySelector<HTMLInputElement>('#enabled')!
 const seconds = root.querySelector<HTMLInputElement>('#seconds')!
 const enabledLabel = root.querySelector<HTMLSpanElement>('.switch span')!
@@ -40,4 +40,3 @@ void createSandboxedUiClient().then(async (client) => {
     finally { save.disabled = false }
   }
 }).catch((error) => { root.querySelector('main')?.setAttribute('aria-busy', 'false'); status.textContent = error instanceof Error ? error.message : 'Card Timer settings are unavailable.' })
-

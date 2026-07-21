@@ -1,10 +1,21 @@
-# NeoAnki Card Timer
+# Card Timer
 
-A signed, isolated NeoAnki extension that shows an optional target timer while studying. Reaching zero never grades a card; the learner still reveals the answer and chooses a memory grade.
+Keep review sessions moving with a visible countdown target for each card. When time runs out, Card Timer gives a gentle notification and keeps the card open so you can reveal the answer and grade it yourself.
+
+## Features
+
+- Choose a target from 5 seconds to 5 minutes per card.
+- See the remaining time and progress beside the card while studying.
+- Hear a screen-reader announcement at five seconds and when the target ends.
+- Pause normal grading decisions until you are ready; the timer never reveals or grades a card.
+
+## Install
+
+Download the `.neoanki-extension` file from the latest release, then open **Settings → Extensions → Install from file** in Neo Anki.
 
 ## Privacy and permissions
 
-Card Timer has no network or content access. Its synchronized configuration stores only whether the timer is enabled and the selected duration. The settings and review controls run in sandboxed SDK 2 iframes.
+Card Timer does not read your notes or connect to the internet. It synchronizes only the on/off setting and selected duration.
 
 Requested permissions:
 
@@ -25,4 +36,3 @@ npm run build
 ```
 
 Production releases are reproducibly built from a protected Ed25519 signing key by GitHub Actions. No private signing key is stored in the repository.
-
