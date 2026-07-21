@@ -20,8 +20,9 @@ Card Timer does not read your notes or connect to the internet. It synchronizes 
 Requested permissions:
 
 - `config:sync` — save the enabled state and duration.
-- `ui:settings` — render the settings panel.
 - `ui:review` — render the countdown beside the active card.
+
+Settings are declared as inert manifest data and rendered by Neo Anki. Card Timer does not ship settings-page code.
 
 ## Development
 

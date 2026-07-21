@@ -1,6 +1,6 @@
 {
   "name": "@neoanki/card-timer",
-  "version": "2.0.4",
+  "version": "2.1.0",
   "description": "A countdown target for pacing Neo Anki review sessions.",
   "license": "MIT",
   "type": "module",
@@ -8,10 +8,9 @@
   "neoAnki": {
     "workerEntry": "src/worker.ts",
     "uiEntries": {
-      "settings": "src/settings.ts",
       "review": "src/review.ts"
     },
-    "coreRef": "4f40587f9066eedfe84d603716d0dbb711153f50"
+    "coreRef": "ccb655a4ea882ffebb40f4b08267e15a34cc93e7"
   },
   "scripts": {
     "build": "neo-anki-extension build",
